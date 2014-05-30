@@ -425,7 +425,7 @@ Modernizr.load({
 });
 
 function loadUserProgress() {
-    pybossa.userProgress('drawA9').done(function(data){
+    pybossa.userProgress('arretonHoard').done(function(data){
             console.log("Total answers done for user: " + data.done);
 	if ((data.done == 1) && ($.cookie('survey') === undefined)){
            $("#survey").modal('show');
@@ -847,7 +847,7 @@ pybossa.presentTask(function(task, deferred) {
 });
 
 if(Modernizr.borderradius) {
-    pybossa.run('drawA9');
+    pybossa.run('arretonHoard');
 }
 else {
     $(".skeleton").hide();
